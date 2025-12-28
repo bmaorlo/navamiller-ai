@@ -1,0 +1,174 @@
+{
+  "unit_metadata": {
+    "id": "unit_01",
+    "title": "פיצוח הטענה המרכזית",
+    "description": "בשיעור זה נלמד לזהות את הטענה המרכזית בטקסט",
+    "assets_base_url": "https://my-bucket.com/assets/unit_01/",
+    "intro_video_id": "123456789",
+    "video_provider": "vimeo",
+    "estimated_time": "15 דקות"
+  },
+  "sequence": [
+    {
+      "id": "step_0_anchor",
+      "mode": "MENTOR_BRIDGE",
+      "title": "ברוכים הבאים",
+      "media_type": "video",
+      "video_id": "987654321",
+      "video_provider": "vimeo",
+      "description": "צפו בסרטון ההקדמה",
+      "action_text": "יאללה {child_name}, מתחילים!",
+      "next_button_text": "בוא נתחיל!"
+    },
+    {
+      "id": "step_1_mapping",
+      "mode": "SILENT_LOGGER",
+      "title": "זיהוי הטענה",
+      "question": "מה טוען הכותב בקטע שקראנו?",
+      "question_image": null,
+      "options": [
+        {
+          "id": "opt_fact",
+          "text": "כדור הארץ מתחמם בעשורים האחרונים",
+          "image_src": null,
+          "type": "DISTRACTOR_FACT",
+          "log_tag": "confuses_fact"
+        },
+        {
+          "id": "opt_topic",
+          "text": "המאמר עוסק באקלים",
+          "image_src": null,
+          "type": "DISTRACTOR_TOPIC",
+          "log_tag": "confuses_topic"
+        },
+        {
+          "id": "opt_correct",
+          "text": "האנושות חייבת לעבור לאנרגיה מתחדשת כדי להציל את כדור הארץ",
+          "image_src": null,
+          "type": "VALID_CLAIM",
+          "log_tag": "success"
+        }
+      ],
+      "refinement_loop": {
+        "trigger": "2_attempts",
+        "media_type": "video",
+        "video_id": "refinement_001",
+        "video_provider": "vimeo",
+        "message": "בוא ננסה להבין יחד מה ההבדל בין עובדה לטענה"
+      },
+      "success_message": "מצוין {child_name}! זיהית נכון את הטענה!",
+      "next_action": "proceed_immediately"
+    },
+    {
+      "id": "step_2_understanding",
+      "mode": "ACTIVE_ASSEMBLY",
+      "title": "בניית הנוסחה",
+      "instruction": "גררו את המילים הנכונות למקומן",
+      "interaction": "drag_words_to_slots",
+      "formula_visual": "נושא + עמדת הכותב = טענה מרכזית",
+      "slots": [
+        {
+          "id": "slot_1",
+          "context": "מה הכותב מנסה ל____ אותי?",
+          "correct": "לשכנע",
+          "options": ["לשכנע", "לספר", "להפחיד", "לשעשע"]
+        },
+        {
+          "id": "slot_2",
+          "context": "טענה תכלול תמיד את ה____ האישית של הכותב.",
+          "correct": "דעה",
+          "options": ["דעה", "עובדה", "כותרת", "שאלה"]
+        }
+      ],
+      "refinement_loop": {
+        "trigger": "2_attempts",
+        "media_type": "video",
+        "video_id": "112233445",
+        "video_provider": "vimeo",
+        "message": "הנה הסבר קצר שיעזור לך"
+      },
+      "success_message": "נהדר! הבנת את הנוסחה!"
+    },
+    {
+      "id": "step_3_practice",
+      "mode": "SILENT_LOGGER",
+      "title": "תרגול נוסף",
+      "question": "איזה מהמשפטים הבאים מכיל טענה ולא רק עובדה?",
+      "options": [
+        {
+          "id": "opt_1",
+          "text": "יש הרבה פלסטיק באוקיינוסים",
+          "type": "DISTRACTOR_FACT",
+          "log_tag": "confuses_fact_2"
+        },
+        {
+          "id": "opt_2",
+          "text": "חובה להפסיק להשתמש בפלסטיק חד פעמי",
+          "type": "VALID_CLAIM",
+          "log_tag": "success"
+        },
+        {
+          "id": "opt_3",
+          "text": "פלסטיק מיוצר מנפט",
+          "type": "DISTRACTOR_FACT",
+          "log_tag": "confuses_fact_3"
+        }
+      ],
+      "refinement_loop": {
+        "trigger": "2_attempts",
+        "media_type": "video",
+        "video_id": "refinement_002",
+        "video_provider": "vimeo",
+        "message": "שים לב למילה 'חובה' - היא מציינת עמדה ולא עובדה"
+      }
+    },
+    {
+      "id": "step_4_visual",
+      "mode": "SILENT_LOGGER",
+      "title": "זיהוי ויזואלי",
+      "question": "התבונן בתמונות. איזו תמונה מייצגת טענה ולא עובדה?",
+      "question_image": null,
+      "options": [
+        {
+          "id": "opt_img_1",
+          "text": "עץ יבש (עובדה: יש בצורת)",
+          "image_src": "drought_fact.png",
+          "type": "DISTRACTOR_FACT",
+          "log_tag": "visual_fact_error"
+        },
+        {
+          "id": "opt_img_2",
+          "text": "שלט מחאה: צריך לפעול עכשיו!",
+          "image_src": "protest_claim.png",
+          "type": "VALID_CLAIM",
+          "log_tag": "success"
+        }
+      ],
+      "refinement_loop": {
+        "trigger": "2_attempts",
+        "media_type": "video",
+        "video_id": "refinement_visual",
+        "video_provider": "vimeo"
+      }
+    },
+    {
+      "id": "step_5_summary",
+      "mode": "CLOSING_PROTOCOL",
+      "title": "סיכום",
+      "video_reward_id": "998877665",
+      "video_provider": "vimeo",
+      "celebration_text": "כל הכבוד {child_name}! סיימת את היחידה!",
+      "summary_points": [
+        "למדנו מה זו טענה מרכזית",
+        "הבנו את ההבדל בין עובדה לטענה",
+        "תרגלנו לזהות טענות בטקסטים"
+      ],
+      "badge": {
+        "name": "מזהה טענות מתחיל",
+        "icon": "🏆"
+      },
+      "next_unit_button": "המשך ליחידה הבאה"
+    }
+  ]
+}
+

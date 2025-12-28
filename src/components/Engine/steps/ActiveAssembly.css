@@ -1,0 +1,182 @@
+.active-assembly .formula-display {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.formula-text {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.slots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.slot-row {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.slot-context {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: right;
+  direction: rtl;
+  line-height: 2;
+}
+
+.slot-blank {
+  display: inline-block;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slot-blank:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.slot-blank.filled {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border: 2px solid #667eea;
+  color: #fff;
+}
+
+.slot-blank.error {
+  border-color: #f5576c;
+  animation: shake 0.5s ease-in-out;
+  background: rgba(245, 87, 108, 0.2);
+}
+
+.slot-blank.correct {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.3) 0%, rgba(34, 197, 94, 0.3) 100%);
+  border-color: #4ade80;
+  color: #4ade80;
+}
+
+.word-bank {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.word-bank-label {
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.words-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.draggable-word {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.4);
+  border-radius: 12px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: grab;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.draggable-word:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.draggable-word:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.check-button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.check-button:hover {
+  box-shadow: 0 15px 40px rgba(79, 172, 254, 0.4);
+}
+
+.check-button:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.refinement-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.refinement-icon {
+  font-size: 2rem;
+}
+
+.refinement-header h3 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .slot-context {
+    font-size: 1.05rem;
+    line-height: 2.2;
+  }
+
+  .slot-blank {
+    min-width: 80px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .draggable-word {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .formula-text {
+    font-size: 1.1rem;
+  }
+}
+
