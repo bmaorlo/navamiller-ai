@@ -2,7 +2,7 @@
   "name": "navamiller-ai",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/navamiller-ai",
+  "homepage": "https://bmaorlo.github.io/navamiller-ai",
   "type": "module",
   "scripts": {
     "dev": "vite",
