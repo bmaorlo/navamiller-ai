@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAppStore } from './store/useAppStore';
 import Onboarding from './components/Onboarding/Onboarding';
 import LessonEngine from './components/Engine/LessonEngine';
@@ -17,7 +17,7 @@ function ProtectedRoute({ children }) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route 
@@ -30,7 +30,7 @@ function App() {
         />
         <Route path="/parent" element={<ParentView />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
